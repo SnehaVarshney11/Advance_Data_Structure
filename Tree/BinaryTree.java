@@ -31,6 +31,7 @@ public class BinaryTree {
         third.left = sixth;
         third.right = seventh;
     }
+    // recursive method
     public void preOrder(TreeNode root){
         if(root == null){
             return;
@@ -40,6 +41,7 @@ public class BinaryTree {
         preOrder(root.right);
     }
 
+    //Iterative method
     public void stackPreOrder(TreeNode root){
         if(root == null){
             return;
