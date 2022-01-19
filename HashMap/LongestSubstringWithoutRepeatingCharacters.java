@@ -12,6 +12,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
         for(int end = 0; end < s.length(); end++){
             char ch = s.charAt(end);
             if(map.containsKey(ch)){
+                // If we don't use Math.max the we will go prev index that we don't want
                 start = Math.max(start, map.get(ch) + 1);
             }
             map.put(ch, end);
